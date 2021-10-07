@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form method="GET" action="http://jkorpela.fi/cgi-bin/echo.cgi">
+      <h1>Registrar usuario</h1>
+
+      Nombre: <input type="text" name="nombre" /> <br /><br />
+
+      Apellido: <input type="text" name="apellido" /> <br /><br />
+
+      Mail: <input type="text" name="mail" /> <br /><br />
+
+      Contraseña: <input type="password" name="clave" id="clave" />
+      <input
+        type="button"
+        name="mostrarContraseña"
+        value="Mostrar Contraseña"
+        onclick="window.alert(document.getElementById('clave').value);"
+      />
+      <br /><br />
+
+      Nacionalidad: <br />
+      <input type="radio" name="nacionalidad" value="Argentina" checked />
+      Argentina<br />
+      <input type="radio" name="nacionalidad" value="Brasil" /> Brasil<br />
+      <input type="radio" name="nacionalidad" value="Uruguay" /> Uruguay<br />
+      <input type="radio" name="nacionalidad" value="Otro" /> Otro<br />
+
+      <br />
+      Sobre mi:
+      <br />
+      <textarea
+        name="sobreMi"
+        cols="50"
+        rows="5"
+        placeholder="Ingrese una descripción personal"
+      ></textarea>
+
+      <br /><br />
+      Hincha de
+      <select name="club">
+        <option value="belgrano" selected>Belgrano</option>
+        <option value="talleres">Talleres</option>
+        <option value="instituto">Instituto</option>
+        <option value="racing">Racing</option>
+        <option value="otro">Otro</option>
+      </select>
+
+      <br /><br />
+      Deseo recibir información de los productos por correo electronico
+      <input type="checkbox" name="informacion" value="Si" />
+      <br /><br />
+      Acepto los términos y condiciones de uso
+      <input type="checkbox" name="terminos" value="Si" checked />
+
+      <br /><br />
+      <input type="submit" name="registrar" value="Registrarme" />
+    </form>
+  </body>
+</html>
